@@ -213,6 +213,24 @@ body section.top-box .team-up a {
   padding: 2%;
   font-size: 1.2em;
 }
+body section.top-box .team-up a:hover {
+  background-color: white;
+  color: #808080;
+  border: 1px solid #cfcfcf;
+  animation-duration: 2s;
+  animation-name: pulse;
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
 @media screen and (max-width: 500px) {
   body section.top-box {
     display: flex;

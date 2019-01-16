@@ -69,6 +69,7 @@ html {
 @black-color: black;
 @font-h1: 5rem;
 @grey-border-line: 1px solid rgb(207, 207, 207);
+@mobile: 500px;
 
 // MIXINS:
 .grey-bg-white-font() {
@@ -76,7 +77,7 @@ html {
 	color: @snow-white;
 	.align-text-center();
 }
-.display-flex(@direction, @justify) {
+.display-flex(@direction; @justify) {
 	display: flex;
 	flex-direction: @direction;
 	justify-content: @justify;
@@ -91,6 +92,17 @@ html {
 }
 .align-text-center() {
 	text-align: center;
+}
+.keyframe-animation(@name; @arguments) {
+	@keyframes @name {
+		@arguments();
+	}
+}
+.animation-duration(@time) {
+	animation-duration: @time
+}
+.animation-name(@name) {
+	animation-name: @name;
 }
 
 body {
@@ -120,7 +132,7 @@ body {
 				color: @black-color;
 			}
 
-			@media screen and (max-width: 500px) {
+			@media screen and (max-width: @mobile) {
 				.display-flex(column, space-between);
 				a {
 					border-bottom: @grey-border-line;
@@ -166,10 +178,34 @@ body {
 				margin: 4% 0;
 				padding: 2%;
 				font-size: 1.2em;
+				&:hover {
+					background-color: @snow-white;
+					color: @grey-color;
+					border: @grey-border-line;
+
+					// The animation compiles perfectly to CSS, 
+					// but for some reason doesn't display in browser.
+					// Animations in Dev-tools show it playing.
+					.keyframe-animation(pulse; {
+						from {
+						transform: scale3d(1, 1, 1);
+						}
+					
+						50% {
+						transform: scale3d(1.5, 1.5, 1.5);
+						}
+					
+						to {
+						transform: scale3d(1, 1, 1);
+						}
+					});
+					.animation-duration(2s);
+					.animation-name(pulse);
+				}
 			}
 		}
 
-		@media screen and (max-width: 500px)  {
+		@media screen and (max-width: @mobile)  {
 			.display-flex(row, space-between);
 			flex-wrap: wrap;
 
@@ -212,7 +248,7 @@ body {
 			}
 		}
 
-		@media screen and (max-width: 500px) {
+		@media screen and (max-width: @mobile) {
 			.display-flex(column, flex-start);
 			margin-top: 2%;
 			.main-text {
