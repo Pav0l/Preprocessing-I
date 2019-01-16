@@ -1,1 +1,201 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  width: 880px;
+  margin: 0 auto;
+}
+body {
+  font-size: 1.6rem;
+  width: 90%;
+  margin: 0 auto;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+body header nav a {
+  padding: 2%;
+  text-decoration: none;
+  color: black;
+}
+body section.top-box {
+  border: 1px solid red;
+  background-color: #e9ecef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2%;
+  padding: 4% 0;
+}
+body section.top-box img {
+  max-width: 30%;
+}
+body section.top-box .name-content {
+  border-bottom: 1px solid grey;
+}
+body section.top-box .name-content h1 {
+  font-size: 5rem;
+  padding: 2% 0;
+}
+body section.top-box .name-content p {
+  padding: 0 0 2%;
+  font-size: 2rem;
+}
+body section.top-box .team-up {
+  border: 1px solid blue;
+  padding: 2% 0;
+}
+body section.top-box .team-up p {
+  border: 1px solid green;
+}
+body section.top-box .team-up a {
+  border: 1px solid green;
+  background-color: #808080;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  margin: 2% 0;
+  padding: 2%;
+  font-size: 1.2em;
+}
+body footer {
+  background-color: #808080;
+  color: white;
+  text-align: center;
+  padding: 2% 0 4%;
+}
