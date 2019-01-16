@@ -164,7 +164,7 @@ body header nav a {
   text-decoration: none;
   color: black;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   body header nav {
     display: flex;
     flex-direction: column;
@@ -213,7 +213,7 @@ body section.top-box .team-up a {
   padding: 2%;
   font-size: 1.2em;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   body section.top-box {
     display: flex;
     flex-direction: row;
@@ -258,7 +258,7 @@ body div.main-content .main-table table td {
   border: 1px solid #cfcfcf;
   padding: 4%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   body div.main-content {
     display: flex;
     flex-direction: column;
