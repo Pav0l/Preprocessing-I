@@ -217,7 +217,7 @@ body section.top-box .team-up a:hover {
   background-color: white;
   color: #808080;
   border: 1px solid #cfcfcf;
-  animation-duration: 2s;
+  animation-duration: 0.5s;
   animation-name: pulse;
 }
 @keyframes pulse {
@@ -225,7 +225,7 @@ body section.top-box .team-up a:hover {
     transform: scale3d(1, 1, 1);
   }
   50% {
-    transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale3d(1.2, 1.2, 1.2);
   }
   to {
     transform: scale3d(1, 1, 1);
