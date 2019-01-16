@@ -142,6 +142,15 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+body h1 {
+  font-size: 5rem;
+}
+body h2 {
+  font-size: 3.5rem;
+}
+body h3 {
+  font-size: 2.5rem;
+}
 body header nav {
   display: flex;
   flex-direction: row;
@@ -168,7 +177,6 @@ body section.top-box .name-content {
   border-bottom: 1px solid grey;
 }
 body section.top-box .name-content h1 {
-  font-size: 5rem;
   padding: 2% 0;
 }
 body section.top-box .name-content p {
@@ -192,6 +200,30 @@ body section.top-box .team-up a {
   margin: 2% 0;
   padding: 2%;
   font-size: 1.2em;
+}
+body section.table-bottom {
+  margin-top: 1%;
+}
+body section.table-bottom table {
+  width: 100%;
+  margin-top: 1%;
+  text-align: center;
+}
+body section.table-bottom tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+body section.table-bottom tr:first-child {
+  font-weight: bold;
+}
+body section.table-bottom th,
+body section.table-bottom td {
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 2% 0;
+}
+body section.table-bottom th:first-child,
+body section.table-bottom td:first-child {
+  font-weight: bold;
 }
 body footer {
   background-color: #808080;

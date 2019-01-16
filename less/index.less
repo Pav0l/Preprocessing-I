@@ -99,6 +99,17 @@ body {
 	font-size: 1.6rem;
 	width: 90%;
 	margin: 0 auto;
+
+	h1 {
+		font-size: @font-h1;
+	}
+	h2 {
+		font-size: @font-h1 * 0.7;
+	}
+	h3 {
+		font-size: @font-h1 * 0.5;
+	}
+
 	header {
 		nav {
 			.display-flex(row, flex-end);
@@ -124,7 +135,6 @@ body {
 		.name-content {
 			border-bottom: 1px solid grey;
 			h1 {
-				font-size: @font-h1;
 				padding: 2% 0;
 			}
 			p {
@@ -153,6 +163,36 @@ body {
 			}
 		}
 	}
+
+	section.table-bottom {
+		margin-top: 1%;
+		table{
+			width: 100%;
+			margin-top: 1%;
+			text-align: center;
+		}
+		
+		tr {
+			&:nth-child(even) {
+				background-color: rgb(242, 242, 242);
+			}
+			&:first-child {
+				font-weight: bold;
+			}
+		}
+
+		th, td {
+			border-top: 1px solid rgb(207, 207, 207);
+			border-bottom: 1px solid rgb(207, 207, 207);
+			padding: 2% 0;
+			&:first-child {
+				font-weight: bold;
+			}
+		}
+		
+
+	}
+
 
 	footer {
 		text-align: center;
