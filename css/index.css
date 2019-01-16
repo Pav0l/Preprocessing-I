@@ -134,7 +134,7 @@ html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
-  width: 880px;
+  max-width: 880px;
   margin: 0 auto;
 }
 body {
@@ -151,6 +151,9 @@ body h2 {
 body h3 {
   font-size: 2.5rem;
 }
+body h4 {
+  font-size: 2rem;
+}
 body header nav {
   display: flex;
   flex-direction: row;
@@ -162,13 +165,11 @@ body header nav a {
   color: black;
 }
 body section.top-box {
-  border: 1px solid red;
   background-color: #e9ecef;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 2%;
-  padding: 4% 0;
+  padding: 4%;
 }
 body section.top-box img {
   max-width: 30%;
@@ -179,25 +180,23 @@ body section.top-box .name-content {
 body section.top-box .name-content h1 {
   padding: 2% 0;
 }
-body section.top-box .name-content p {
-  padding: 0 0 2%;
-  font-size: 2rem;
+body section.top-box .name-content h4 {
+  padding-bottom: 2%;
 }
 body section.top-box .team-up {
-  border: 1px solid blue;
   padding: 2% 0;
 }
 body section.top-box .team-up p {
-  border: 1px solid green;
+  margin: 2% 0;
+  padding-bottom: 2%;
 }
 body section.top-box .team-up a {
-  border: 1px solid green;
   background-color: #808080;
   color: white;
   text-align: center;
   text-decoration: none;
   border-radius: 3px;
-  margin: 2% 0;
+  margin: 4% 0;
   padding: 2%;
   font-size: 1.2em;
 }
@@ -257,4 +256,5 @@ body footer {
   color: white;
   text-align: center;
   padding: 2% 0 4%;
+  margin-top: 4%;
 }

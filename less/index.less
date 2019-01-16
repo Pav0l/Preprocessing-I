@@ -57,7 +57,7 @@ html {
 	height: 100%;
 	font-family: @default-font;
 	font-size: 62.5%;
-	width: 880px;
+	max-width: 880px;
 	margin: 0 auto;
 }
 
@@ -67,7 +67,6 @@ html {
 @snow-white: white;
 @light-grey: rgb(233, 236, 239);
 @black-color: black;
-
 @font-h1: 5rem;
 @grey-border-line: 1px solid rgb(207, 207, 207);
 
@@ -75,7 +74,7 @@ html {
 .grey-bg-white-font() {
 	background-color: @grey-color;
 	color: @snow-white;
-	text-align: center;
+	.align-text-center();
 }
 .display-flex(@direction, @justify) {
 	display: flex;
@@ -85,8 +84,13 @@ html {
 .no-decoration() {
 	text-decoration: none;
 }
-.padding-two() {
-	padding: 2%;
+.first-bold() {
+	&:first-child {
+		font-weight: bold;
+	}
+}
+.align-text-center() {
+	text-align: center;
 }
 
 
@@ -110,12 +114,15 @@ body {
 	h3 {
 		font-size: @font-h1 * 0.5;
 	}
+	h4 {
+		font-size: @font-h1 * 0.4;
+	}
 
 	header {
 		nav {
 			.display-flex(row, flex-end);
 			a {
-				.padding-two();
+				padding: 2%;
 				.no-decoration();
 				color: @black-color;
 			}
@@ -123,11 +130,9 @@ body {
 	}
 
 	section.top-box {
-		.border-color(red);
 		background-color: @light-grey;
 		.display-flex(column, space-around);
-		.padding-two();
-		padding: 4% 0;
+		padding: 4%;
 
 		img {
 			max-width: 30%;
@@ -138,28 +143,25 @@ body {
 			h1 {
 				padding: 2% 0;
 			}
-			p {
-				padding: 0 0 2%;
-				font-size: @font-h1 - 3;
+			h4 {
+				padding-bottom: 2%;
 			}
 		}
 
 		.team-up {
-			.border-color(blue);
 			padding: 2% 0;
-			// .display-flex(column, flex-start);
 
 			p {
-				.border-color(green);
+				margin: 2% 0;
+				padding-bottom: 2%;
 			}
 
 			a {
-				.border-color(green);
 				.grey-bg-white-font();
 				.no-decoration();
 				border-radius: 3px;
-				margin: 2% 0;
-				.padding-two();
+				margin: 4% 0;
+				padding: 2%;
 				font-size: 1.2em;
 			}
 		}
@@ -193,42 +195,33 @@ body {
 
 	}
 
-
-
 	section.table-bottom {
 		margin-top: 1%;
 		table{
 			width: 100%;
 			margin-top: 1%;
-			text-align: center;
+			.align-text-center();
 		}
 		
 		tr {
 			&:nth-child(even) {
 				background-color: rgb(242, 242, 242);
 			}
-			&:first-child {
-				font-weight: bold;
-			}
+			.first-bold();
 		}
 
 		th, td {
 			border-top: @grey-border-line;
 			border-bottom: @grey-border-line;
 			padding: 2% 0;
-			&:first-child {
-				font-weight: bold;
-			}
-		}
-		
-
+			.first-bold();
+		}		
 	}
-
-
 	footer {
-		text-align: center;
+		.align-text-center();
 		.grey-bg-white-font();
 		padding: 2% 0 4%;
+		margin-top: 4%;
 
 	}
 }
