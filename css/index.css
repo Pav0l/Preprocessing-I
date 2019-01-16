@@ -201,6 +201,33 @@ body section.top-box .team-up a {
   padding: 2%;
   font-size: 1.2em;
 }
+body div.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2% 0;
+}
+body div.main-content .main-text {
+  max-width: 50%;
+  max-height: 100%;
+  line-height: 2.5rem;
+}
+body div.main-content .main-text p {
+  margin-top: 2%;
+}
+body div.main-content .main-table {
+  padding-left: 2%;
+  width: 50%;
+}
+body div.main-content .main-table table {
+  margin-top: 2%;
+  width: 100%;
+}
+body div.main-content .main-table table tr,
+body div.main-content .main-table table td {
+  border: 1px solid #cfcfcf;
+  padding: 4%;
+}
 body section.table-bottom {
   margin-top: 1%;
 }

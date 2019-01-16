@@ -69,6 +69,7 @@ html {
 @black-color: black;
 
 @font-h1: 5rem;
+@grey-border-line: 1px solid rgb(207, 207, 207);
 
 // MIXINS:
 .grey-bg-white-font() {
@@ -164,6 +165,36 @@ body {
 		}
 	}
 
+	div.main-content {
+		.display-flex(row, space-between);
+		padding: 2% 0;
+
+		.main-text {
+			max-width: 50%;
+			max-height: 100%;
+			line-height: 2.5rem;
+			p {
+				margin-top: 2%;
+			}
+		}
+
+		.main-table {
+			padding-left: 2%;
+			width: 50%;
+			table {
+				margin-top: 2%;
+				width: 100%;
+				tr, td {
+					border: @grey-border-line;
+					padding: 4%;
+				}
+			}
+		}
+
+	}
+
+
+
 	section.table-bottom {
 		margin-top: 1%;
 		table{
@@ -182,8 +213,8 @@ body {
 		}
 
 		th, td {
-			border-top: 1px solid rgb(207, 207, 207);
-			border-bottom: 1px solid rgb(207, 207, 207);
+			border-top: @grey-border-line;
+			border-bottom: @grey-border-line;
 			padding: 2% 0;
 			&:first-child {
 				font-weight: bold;
