@@ -1,1 +1,324 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+body {
+  font-size: 1.6rem;
+  width: 90%;
+  margin: 0 auto;
+}
+body h1 {
+  font-size: 5rem;
+}
+body h2 {
+  font-size: 3.5rem;
+}
+body h3 {
+  font-size: 2.5rem;
+}
+body h4 {
+  font-size: 2rem;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+body header nav a {
+  padding: 2%;
+  text-decoration: none;
+  color: black;
+}
+@media screen and (max-width: 500px) {
+  body header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body header nav a {
+    border-bottom: 1px solid #cfcfcf;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+}
+body section.top-box {
+  background-color: #e9ecef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 4%;
+}
+body section.top-box img {
+  max-width: 30%;
+}
+body section.top-box .name-content {
+  border-bottom: 1px solid #cfcfcf;
+}
+body section.top-box .name-content h1 {
+  padding: 2% 0;
+}
+body section.top-box .name-content h4 {
+  padding-bottom: 2%;
+}
+body section.top-box .team-up {
+  padding: 2% 0;
+}
+body section.top-box .team-up p {
+  margin: 2% 0;
+  padding-bottom: 2%;
+}
+body section.top-box .team-up a {
+  background-color: #808080;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  margin: 4% 0;
+  padding: 2%;
+  font-size: 1.2em;
+}
+body section.top-box .team-up a:hover {
+  background-color: white;
+  color: #808080;
+  border: 1px solid #cfcfcf;
+  animation-duration: 0.5s;
+  animation-name: pulse;
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@media screen and (max-width: 500px) {
+  body section.top-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  body section.top-box .name-content {
+    width: 50%;
+    border-bottom: none;
+  }
+  body section.top-box .name-content h1 {
+    font-size: 3rem;
+  }
+  body section.top-box img {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+body div.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2% 0;
+}
+body div.main-content .main-text {
+  width: 50%;
+  line-height: 2.5rem;
+}
+body div.main-content .main-text p {
+  margin-top: 2%;
+}
+body div.main-content .main-table {
+  padding-left: 2%;
+  width: 50%;
+}
+body div.main-content .main-table table {
+  margin-top: 2%;
+  width: 100%;
+}
+body div.main-content .main-table table tr,
+body div.main-content .main-table table td {
+  border: 1px solid #cfcfcf;
+  padding: 4%;
+}
+@media screen and (max-width: 500px) {
+  body div.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2%;
+  }
+  body div.main-content .main-text {
+    width: 100%;
+  }
+  body div.main-content .main-table {
+    width: 100%;
+    padding: 2% 0;
+  }
+}
+body section.table-bottom {
+  margin-top: 1%;
+}
+body section.table-bottom table {
+  width: 100%;
+  margin-top: 1%;
+  text-align: center;
+}
+body section.table-bottom tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+body section.table-bottom tr:first-child {
+  font-weight: bold;
+}
+body section.table-bottom th,
+body section.table-bottom td {
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 2% 0;
+}
+body section.table-bottom th:first-child,
+body section.table-bottom td:first-child {
+  font-weight: bold;
+}
+body footer {
+  background-color: #808080;
+  color: white;
+  text-align: center;
+  padding: 2% 0 4%;
+  margin-top: 4%;
+}

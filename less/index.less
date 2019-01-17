@@ -53,7 +53,243 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html {
+	height: 100%;
+	font-family: @default-font;
+	font-size: 62.5%;
+	max-width: 880px;
+	margin: 0 auto;
 }
 
+// VARIABLES:
+@default-font: 'Roboto', sans-serif;
+@grey-color: rgb(128, 128, 128);
+@snow-white: white;
+@light-grey: rgb(233, 236, 239);
+@black-color: black;
+@font-h1: 5rem;
+@grey-border-line: 1px solid rgb(207, 207, 207);
+@mobile: 500px;
+
+// MIXINS:
+.grey-bg-white-font() {
+	background-color: @grey-color;
+	color: @snow-white;
+	.align-text-center();
+}
+.display-flex(@direction; @justify) {
+	display: flex;
+	flex-direction: @direction;
+	justify-content: @justify;
+}
+.no-decoration() {
+	text-decoration: none;
+}
+.first-bold() {
+	&:first-child {
+		font-weight: bold;
+	}
+}
+.align-text-center() {
+	text-align: center;
+}
+.keyframe-animation(@name; @arguments) {
+	@keyframes @name {
+		@arguments();
+	}
+}
+.animation-duration(@time) {
+	animation-duration: @time
+}
+.animation-name(@name) {
+	animation-name: @name;
+}
+
+body {
+	font-size: 1.6rem;
+	width: 90%;
+	margin: 0 auto;
+
+	h1 {
+		font-size: @font-h1;
+	}
+	h2 {
+		font-size: @font-h1 * 0.7;
+	}
+	h3 {
+		font-size: @font-h1 * 0.5;
+	}
+	h4 {
+		font-size: @font-h1 * 0.4;
+	}
+
+	header {
+		nav {
+			.display-flex(row, flex-end);
+			a {
+				padding: 2%;
+				.no-decoration();
+				color: @black-color;
+			}
+
+			@media screen and (max-width: @mobile) {
+				.display-flex(column, space-between);
+				a {
+					border-bottom: @grey-border-line;
+					margin: 0 auto;
+					width: 100%;
+					.align-text-center();
+				}
+			}
+		}
+	}
+
+	section.top-box {
+		background-color: @light-grey;
+		.display-flex(column, space-around);
+		padding: 4%;
+
+		img {
+			max-width: 30%;
+		}
+
+		.name-content {
+			border-bottom: @grey-border-line;
+			h1 {
+				padding: 2% 0;
+			}
+			h4 {
+				padding-bottom: 2%;
+			}
+		}
+
+		.team-up {
+			padding: 2% 0;
+
+			p {
+				margin: 2% 0;
+				padding-bottom: 2%;
+			}
+
+			a {
+				.grey-bg-white-font();
+				.no-decoration();
+				border-radius: 3px;
+				margin: 4% 0;
+				padding: 2%;
+				font-size: 1.2em;
+				&:hover {
+					background-color: @snow-white;
+					color: @grey-color;
+					border: @grey-border-line;
+
+					// The animation compiles perfectly to CSS, 
+					// but for some reason doesn't display in browser.
+					// Animations in Dev-tools show it playing.
+					.keyframe-animation(pulse; {
+						from {
+						transform: scale3d(1, 1, 1);
+						}
+					
+						50% {
+						transform: scale3d(1.2, 1.2, 1.2);
+						}
+					
+						to {
+						transform: scale3d(1, 1, 1);
+						}
+					});
+					.animation-duration(0.5s);
+					.animation-name(pulse);
+				}
+			}
+		}
+
+		@media screen and (max-width: @mobile)  {
+			.display-flex(row, space-between);
+			flex-wrap: wrap;
+
+			.name-content {
+				width: 50%;
+				border-bottom: none;
+				h1 {
+					font-size: 3rem;
+				}				
+			}
+			img {
+				max-width: 50%;
+				width: 50%;
+			}
+		}
+	}
+
+	div.main-content {
+		.display-flex(row, space-between);
+		padding: 2% 0;
+
+		.main-text {
+			width: 50%;
+			line-height: 2.5rem;
+			p {
+				margin-top: 2%;
+			}
+		}
+
+		.main-table {
+			padding-left: 2%;
+			width: 50%;
+			table {
+				margin-top: 2%;
+				width: 100%;
+				tr, td {
+					border: @grey-border-line;
+					padding: 4%;
+				}
+			}
+		}
+
+		@media screen and (max-width: @mobile) {
+			.display-flex(column, flex-start);
+			margin-top: 2%;
+			.main-text {
+				width: 100%;
+			}
+			.main-table {
+				width: 100%;
+				padding: 2% 0;
+			}
+		}
+
+	}
+
+	section.table-bottom {
+		margin-top: 1%;
+		table{
+			width: 100%;
+			margin-top: 1%;
+			.align-text-center();
+		}
+		
+		tr {
+			&:nth-child(even) {
+				background-color: rgb(242, 242, 242);
+			}
+			.first-bold();
+		}
+
+		th, td {
+			border-top: @grey-border-line;
+			border-bottom: @grey-border-line;
+			padding: 2% 0;
+			.first-bold();
+		}		
+	}
+
+	footer {
+		.align-text-center();
+		.grey-bg-white-font();
+		padding: 2% 0 4%;
+		margin-top: 4%;
+
+	}
+}
